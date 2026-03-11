@@ -9,7 +9,8 @@ from vtk.util.numpy_support import vtk_to_numpy, numpy_to_vtk
 T_seed_K = 1500.0
 T_hot_K = 1850.0
 
-INFER_DIR = "outputs/arch.fully_connected.layer_size=256,arch.fully_connected.nr_layers=6/train_cz_v1/inferencers"
+#INFER_DIR = "outputs/arch.fully_connected.layer_size=256,arch.fully_connected.nr_layers=6/train_cz_v1/inferencers"
+INFER_DIR = "outputs/arch.fully_connected.layer_size=256,arch.fully_connected.nr_layers=6,optimizer.lr=2e-4/train_cz_v1/inferencers"
 OUT_FILE = "combined_temperature_v2.vtp"
 
 
@@ -146,4 +147,5 @@ def main():
 
 
 if __name__ == "__main__":
+
     main()
