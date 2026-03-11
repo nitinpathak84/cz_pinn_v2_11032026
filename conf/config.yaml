@@ -1,0 +1,20 @@
+defaults:
+  - physicsnemo_default
+  - arch:
+      - fully_connected
+  - optimizer: adam
+  - scheduler: exponential_lr
+  - loss: sum
+  - batch_size: cz_v2
+  - custom: cz_v2
+  - _self_
+
+jit: true
+save_filetypes: "vtk"
+debug: false
+
+training:
+  max_steps: 30000
+  rec_results_freq: 500
+  rec_constraint_freq: 500
+  rec_inference_freq: 500

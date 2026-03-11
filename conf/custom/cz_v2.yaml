@@ -1,0 +1,56 @@
+geometry:
+  # Physical dimensions in meters
+  crystal_radius: 0.110
+  crystal_height: 0.180
+
+  melt_radius: 0.220
+  melt_height: 0.180
+
+  crucible_wall: 0.015
+  crucible_bottom: 0.020
+
+  heater_gap: 0.020
+  heater_thickness: 0.025
+  heater_y_bottom: -0.010
+  heater_y_top: 0.270
+
+  outer_radius: 0.450
+  outer_y_bottom: -0.080
+  outer_y_top: 0.520
+
+  argon_top_gap: 0.100
+
+physics:
+  # Relative / effective conductivity values for interface continuity
+  k_cr: 1.00
+  k_m: 0.35
+  k_cu: 0.18
+  k_ar: 0.01
+  k_ht: 2.00
+  k_ins: 0.03
+
+boundary:
+  theta_seed: 0.0
+  theta_hot: 1.0
+  theta_sl: 0.60
+
+numerics:
+  eps_r: 1.0e-4
+
+nondim:
+  # x and y are both in meters here, so keep 1.0
+  aspect_sq: 1.0
+
+dimensional:
+  # Only used later in merge/postprocess, not training
+  T_seed_K: 1500.0
+  T_hot_K: 1850.0
+
+inference:
+  n_crystal: 12000
+  n_melt: 16000
+  n_crucible: 18000
+  n_argon: 24000
+  n_heater: 12000
+  n_insulation: 22000
+  batch_size: 4096
